@@ -1,0 +1,30 @@
+<br>
+<h1 class="text-center display-6 mt-4">Avaliar Sintomas</h1><br>
+
+<div class="container">
+    <div class="card">
+        <h3 align="center"></h3>
+        <div class="card-body">
+            <p> O “Avaliar Sintomas” é uma funcionalidade que permite ao cidadão avaliar os seus sintomas e obter informações e conselhos adequados ao seu problema de saúde não emergente.</p>
+            <p>É importante saber que “Avaliar Sintomas”:</p>
+            <ol>
+                <li>Não é uma ferramenta de diagnóstico clínico</li> 
+                <li>Não substitui os cuidados de saúde de um profissional.</li>
+ 
+
+            </ol>
+            <form action="/api/prompt" method="POST">
+
+             <label for="prompt"> Descreve os Sintomas <Strong>Ex. Sou João, Tenho 22 anos de idade, estou a sentir dor de cabeça...</Strong></label>
+                <textarea name="prompt" id="prompt" cols="10" rows="3" class="form-control" required></textarea><br>
+
+                <button class="btn btn-success" type="submit">Resultado</button>  
+            </form>
+              
+            
+        </div>
+    </div>
+     
+</div>
+
+ 

@@ -1,0 +1,263 @@
+<style>
+  
+    #carousel-1{
+      
+         background-image: url("/public/fotos/porque-fazer-che.png");
+        background-repeat: no-repeat;
+       background-size: cover; 
+         
+      
+    }
+     #carousel-2{
+      
+         background-image: url("/public/fotos/baner1.jpg");
+        background-repeat: no-repeat;
+       background-size: cover; 
+         
+      
+    }
+     #carousel-3{
+      
+         background-image: url("/public/fotos/baner2.jpg");
+        background-repeat: no-repeat;
+       background-size: cover; 
+         
+      
+    }
+    #carousel-4{
+      background-image: url("/public/fotos/fotoadmin.jfif");
+        background-repeat: no-repeat;
+       background-size: cover; 
+
+    }
+    .carousel-item{
+        
+    }
+    .carousel-inner{
+        
+       
+       }
+    .titulo{
+         text-align: center;
+        margin: auto; 
+        
+    }
+    .hr{
+        border: solid red 1px;
+        width: 7rem;
+        height: 2rem;
+        background-color:red;
+        color: red;
+        margin: auto;
+    }
+    .servicos{
+      margin: 20px solid red;
+      background-color: rgba(110, 110, 110, 0.356);
+
+    }
+    .carousele{
+        color: #fff;
+        display: flex;
+        padding-left: 3rem;
+        padding-right: 3rem;
+         background-color: rgba(0, 255, 255, 0.445); 
+         height: 500px;
+         
+    }
+    
+</style>
+
+<div id="carousel" class="carousel slide" data-bs-ride="carousel">
+   <div class="carousel-indicators"class="carousel-indicators">
+            <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carousel" data-bs-slide-to="1"  aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carousel" data-bs-slide-to="2"  aria-label="Slide 3"></button>
+            </div>
+  <div class="carousel-inner">
+    {{#if user}}
+    <div class="carousel-item active" id="carousel-4">
+        
+      <div class="carousele">
+         <div class="titulo">
+            <h1>PORTAL DO ESPECIALISTA</h1>
+            <p>somos uma Consulturia Moderna utilizamos os recurso da intert para da soluçoes viavel a nossa populaçoa</p>
+            <a class="btn alert-primary " href="/admin/cunsultas" role="button">Pacientes Aguardando</a> 
+            
+         </div>
+           
+      </div>
+    </div>
+    {{else}}
+    
+    <div class="carousel-item active" id="carousel-1">
+        
+      <div class="carousele">
+         <div class="titulo">
+            <h1>Está se Sentindo Mal? Avalie seu Sintoma Online</h1>
+            <p>Está Tecnologia Permite Realizar consultas sem que haja necessidade de locomoção até o Hospital</p>
+            <a class="btn alert-primary " href="/chekup" role="button">Avaliar Sintomas</a> 
+            
+         </div>
+           
+      </div>
+    </div>
+    <div class="carousel-item " id="carousel-2">
+        
+      <div class="carousele">
+         <div class="titulo">
+            <h1>O</h1>
+            <p>somos uma Consulturia Moderna utilizamos os recurso da intert para da soluçoes viavel a nossa populaçoa</p>
+          
+            <a class="btn alert-primary " href="/chekup" role="button">Avaliar Sintomas</a> 
+            
+         </div>
+           
+      </div>
+    </div>
+    <div class="carousel-item" id="carousel-3">
+        
+      <div class="carousele">
+         <div class="titulo">
+            <h1>Obtenha uma vida saudavel</h1>
+            <p>somos uma Consulturia Moderna utilizamos os recurso da internet para dar soluções viável a nossa população</p>
+               <a class="btn alert-primary " href="/chekup" role="button">Avaliar Sintomas</a> 
+            
+         </div>
+           
+      </div>
+    </div>
+    {{/if}}
+     
+  </div>
+</div><br>
+
+<div class="jumbotron mt-4" id="corpo">
+<div class="container mt-4">
+
+ {{#if user}}
+<h2 class="text-center display-6" id="sobre">Dica</h2>
+<span></span>
+
+{{else}}
+       <h2 class="text-center display-6" id="sobre">Quem Somos</h2>
+<hr class="hr">
+  <br>
+  <div class="row justify-content-center">
+            <div class="  col-md-8">
+                  <img src="/public/fotos/sobrenos.jpg" alt="foto1">
+                  
+            </div>
+           
+            <p class="text-justify col-md-4">
+                <br><br>
+                 Com as <strong>Enchentes nas Unidades Hospitalar</strong>  e a Falta de espaço para acomodação de utentes que pretende realizar consultas é um problema real da nossa Sociedade. <br>
+                 com Esse facto como Estudantes da Universidade Cuito Cuanavale nos Curso de Informatica para Gestão e Infermagem, criamos uma Solução desenvolvemos uma aplicação que conecta utentes e Especialista é um simples click,
+                    onde utentes possam <strong> ser Atendido onde e quando quiser, Check Up com IA. </strong>  <br>
+                  A nossa Plataforma, oferece proteção, a qualquer hora do dia ou noite, atraveis de Atendimento remoto com profissionais de saude qualificado esclarecendo duvidas gerais sobre a saude e fornecendo orietação educativas e de auto cuidado, além do adquado direcionamento a unidades Hospitalar mas proximo de si  
+                   
+            
+            </p>
+            
+        
+        </div>
+   </div>
+   
+   <div class="servicos">
+    <div class="container mt-4">
+      <br> <br>
+    <h2 class="text-center display-10" id="servico">Nossos <Strong>Serviços</Strong> </h2>
+    <hr class="hr"><br>
+    <h5 class="card_title" align="center">Realize Consulta online, Prestamos Atendimento online e Presencial 24Horas </h5>
+    <br> 
+     <div class="row justify-content-sm-center">
+            <div class="col-sm-6 col-md-6">
+                <div class="card mb-5" >
+                    <img src="/public/fotos/unic-sn-medicos-600x400.jpg" class="card-img-top">
+                <div class="card-body">  
+                  <h4 class="card_title" >Especialista Fisoterapia</h4>
+                  <small>disponivel 24horas</small>
+                  <br>  
+                  <a href="/consulta/"  class="btn btn-outline-success" type="button">Marcar Consulta</a>
+                </div>
+                
+
+             
+            </div>
+            </div> <div class="col-sm-6 col-md-6">
+                <div class="card mb-5" >
+                    <img src="/public/fotos/Captura da Web_21-4-2023_1213_www.google.com.jpeg" class="card-img-top">
+                <div class="card-body">  
+                  <h4 class="card_title" >Especialista Fisoterapia</h4>
+                  <small>disponivel 24horas</small>
+                  <br> <a href="/consulta/"  class="btn btn-outline-success" type="button">Marcar Consulta</a>
+                </div>
+            </div>
+            </div> <div class="col-sm-6 col-md-6" >
+                <div class="card mb-5" >
+                    <img class="card-img-top" src="/public/fotos/Captura da Web_21-4-2023_1223_www.google.com.jpeg">
+               <div class="card-body">  
+                  <h4 class="card_title" >Especialista Fisoterapia</h4>
+                  <small>disponivel 24horas</small>
+                  <br> <a href="/consulta/"  class="btn btn-outline-success" type="button">Marcar Consulta</a>
+                </div> 
+            </div>
+             
+            </div> <div class="col-sm-6 col-md-6">
+                <div class="card mb-5" >
+                    <img class="card-img-top" src="../public/img/img1.jpg">
+                <div class="card-body">  
+                  <h4 class="card_title" >Especialista Fisoterapia</h4>
+                  <small>disponivel 24horas</small>
+                  <br> <a href="/consulta/"  class="btn btn-outline-success" type="button">Marcar Consulta</a>
+                </div>
+
+                </h4>
+            </div>
+            </div>
+            
+        </div>
+        </div>
+        </div>
+        <br><br>
+        <h2 class="text-center display-10" id="vantagens">Vantagens na <Strong>diaGnosMI</Strong> </h2>
+<hr class="hr"><br>
+{{/if}}
+        <div class="container">
+          <div class="card mt-3">
+        <div class="card-body">
+            
+        <h5 lang="display-4">Utentes</h5>
+        <ol>
+          <li>Realizar Consulta no Comodo da tua casa</li>
+        <li>Realizar um Chek up </li>
+        <li>Marca Consulta com Especialista</li>
+        <li>Atendimento Personalizado</li>
+        <li>ter uma renda Extra</li>
+        <li>Convidar Amigo, familiar</li>
+        
+    </ol>
+    </div>
+    </div>
+     <div class="card mt-3">
+        <div class="card-body">
+            
+        <h5 lang="display-4">Especialista</h5>
+        <ol>
+
+        <li>Selecione Especilidade </li>
+        <li>Registra-se</li>
+        <li>Trabalhar no Comodo da sua Casa</li>
+        <li>Convidar Amigo, familiar</li>
+        
+    </ol>
+    </div>
+    </div>
+        </div> 
+        
+        
+  
+
+</div>
+
+   

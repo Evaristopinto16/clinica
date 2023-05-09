@@ -1,0 +1,44 @@
+<div class="container">
+    <br>
+<h1 class="text-center display-6 mt-5">Agenda uma Consulta</h1><br>
+         <p>  O contacto entre Médicos Paciente ficou mas simples e Prático. 
+        Nossa Plataforma está preparada para conectar médicos e Paciente de forma simples e Segura. </p>
+        <h5>Dica Importante:</h5>
+        <p class="text-justify">Prepare-se bem e aproveita essa oportunidade de cuidar da sua Saúde. 
+        Você precisa de um dispositivo <Strong>(telefone, tablet, ou Computador)</Strong>, com câmera de video, saída de audio e acesso à internet. <br>
+        No momento da consulta online, aja naturalmente, como se estivesse em uma consulta Presencial: <Strong>Procure um local tranquilo e iluminado, sem barulho e que garanta a você e ao médico privacidade e sigilo</Strong></p>
+
+<div class="card mt-4">
+    <div class="card-body">
+        <h3>Preencher os dados</h3>
+        <form action="/formulario" method="POST">
+            <label for="nome">NOME COMPLETO</label>
+            <input type="text" name="nome" class="form-control" required>
+            <Label for="idade">IDADE</Label> 
+            <input type="number" name="idade" class="form-control">
+            <label for="contacto" >NÚMERO TELEFONICO OU EMAIL</label> 
+            <input type="text" name="contacto" class="form-control">
+            <label for="sintoma">SINTOMAS</label>
+            <textarea name="sintoma" id="sintoma" cols="10" rows="5" class="form-control"></textarea>
+             <br>
+             <label for="dia">Agendar a Consulta para o dia </label>
+             <input name="dia" type="date" class="form-control" required> <br>
+             <label for="hora">Agendar a hora</label>
+             <input name="hora" type="time" class="form-control" required> <br>
+             <label for="categoria">Selecione a Especialidade</label>
+             <select name="categoria" class="form-control">
+               {{#each categorias}}
+               <option value="{{_id}}">{{nome}}</option>
+                {{/each}}
+             </select>
+            <br>
+            <button class="btn btn-success" type="submit">Agendar</button>
+            <a class="btn alert-danger" href="#" type="button
+            ">Cancelar</a>
+        </form>
+        
+    </div>
+</div>
+
+
+</div>

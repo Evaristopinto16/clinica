@@ -1,0 +1,69 @@
+<style>
+  p{
+    font-size: 20px;
+    font-weight: bold;
+  }
+  span{
+    color: red;
+  }
+</style>
+
+
+<br> <h1 align="center" class="mt-4" id="historico">Historico Clinico do Paciente</h1>
+ <div class="container">
+    <div class="card">
+        <div class="card-body"> 
+        
+           <div id="dados">
+              <p>Nome Completo <span>{{paciente.nome}}</span>, de {{paciente.idade}} Anos de idade <br> Agentou a consulta no dia 
+                {{paciente.data}} para o dia <span>{{paciente.dia}} as {{paciente.hora}} </span> horas <br>
+                tem os senguites sintomas <span>{{paciente.sintoma}} </span> <br>
+                contacto {{paciente.contacto}}
+                </p>
+                <small>Id do paciente <strong>{{paciente._id}}</strong> <br> Esp. {{paciente.categoria.nome}}</small>
+           </div>
+                
+
+  <form action="/admin/pentente" method="post">
+                <input type="hidden" name="id" value="{{paciente._id}}"> 
+                <input type="hidden" name="nome" value="{{paciente.nome}}">
+                <input type="hidden" name="idade" value="{{paciente.idade}}">
+                <input type="hidden" name="contacto" value="{{paciente.contacto}}">
+                <input type="hidden" name="dia"  value="{{paciente.dia}}">
+                <input type="hidden" name="hora" value="{{paciente.hora}}">
+                <input type="hidden" name="especialidade" value="{{paciente.categoria.nome}}">
+                  
+                 <br>
+                <button type="submit" class="btn btn-success" onclick="gerarpdf()">Atender</button>
+
+                  
+                <a href="/admin/cunsultas" class="btn alert-success">Voltar</a>
+  
+   </form> 
+        </div>
+        
+    </div>
+    </div>
+    <script>
+      gerarpdf = function(){
+         var pegar = document.getElementById("dados").innerHTML;
+         var historico = document.getElementById("historico").innerHTML;
+         var janela = window.open('','', 'width=1000, height=600');
+         janela.document.write("<h1 align='center' style='color: red;'>Dica importante</h1>");
+         janela.document.write("<p>você Precisa de um dispositivo: Telefone, tablet ou Computador. com camera de video e acesso a internet</p>")
+        janela.document.write("<p>Cordialidade, respeito e sigilo médico devem ser preservados na hora da consulta. <br> Caso contrário, o contato pode parecer frio ou insuficiente, deixando uma impressão negativa sobre o seu atendimento. <br> Portanto, mostre interesse em ouvir o paciente, suas queixas e objetivos para satisfazer as necessidades dele no momento.</p>")
+        janela.document.write("<hr style='border: 2px solid blue;'>");
+        janela.document.write(" <h1 align='center'>Dados do Paciente</h1>");
+        janela.document.write(pegar)
+        janela.document.write("<hr style='border: 2px solid blue;'>");
+        janela.document.write("<br>");
+        janela.document.write("<p><strong>OBS: </strong>Baixe este Arquivo em Pdf, no decorrer da consulta faz uma captura de ecra</p>")
+        janela.document.write("<p><strong>Para mais transparencia A pós o termino da consula, anexa está ficha e a captura de ecra no Site </strong></p>")
+        
+        
+        janela.document.close();
+        janela.print()
+         
+      }
+       
+    </script>

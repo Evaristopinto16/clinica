@@ -1,0 +1,24 @@
+  
+
+  
+
+ 
+<div class="container mt-4" >
+    <h2>Consultas Marcadas</h2>
+    <a href="/admin/adicionar" type="button" class="btn btn-success">Atender Todos</a>
+    {{#each paciente}}
+    <div class="card">
+        
+        <div class="card-body mt-3" >
+            <h4>Nome do Paciente:  {{nome}}</h4>
+              <h4 class="mt-4">Data: {{dia}}</h4>
+              <h5 class="mt-4">hora: {{hora}}</h5>
+              <small class="mt-4">idade: {{idade}}</small><br>
+              <small class="mt-4">Especialidade: <strong>{{categoria.nome}}</strong></small><br>
+             
+            <a href="/admin/consulta/{{_id}}" class="btn btn-success" type="button">Analisar</a>
+            
+          </div>
+    </div>
+    {{/each}}
+</div>

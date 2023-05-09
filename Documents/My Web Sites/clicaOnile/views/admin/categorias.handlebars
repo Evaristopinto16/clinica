@@ -1,0 +1,16 @@
+<div class="container">
+    <h2 align="center" class="mt-4">Listas de Especialidades</h2>
+     <a href="/admin/categoria/add" class="btn alert-success">Adicionar Especialidade</a>
+    <div class="card mt-2">
+         {{#each categoria}}
+        <div class="card-body">
+             <h4>Especialidade: {{nome}}</h4>
+             <a href="/admin/categoria/rem/{{_id}}" class="btn alert-danger">Deletar</a>
+           
+        </div>
+         {{else}}
+            <h4>Não Especialidade Registada</h4>
+          {{/each}}
+    </div>
+   
+</div>

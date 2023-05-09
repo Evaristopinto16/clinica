@@ -1,0 +1,62 @@
+<style>
+   .fundo{
+        background-color: rgba(122, 177, 223, 0.692);
+       color: white;
+        height: 505px;
+        width: 101.9%;;
+   }
+   #img{
+    background-image: url(/public/img/professor.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+   }
+   #body{
+   padding: 0;
+   margin: 0;
+   }
+    
+    
+</style>
+
+
+<div class="row justify-content-sm-center" id="body">
+    <div class="col-sm-6 col-md-6" id="img">
+        <div class="fundo">
+            <br>
+           <h1 align="center">BEM VINDO</h1>
+           </div>
+        
+
+    </div>
+    <div class="col-sm-6 col-md-6 ">
+        
+
+     <div class="card card mb-3  ">
+      <div class="card-body">
+         
+
+         <h3 align="center">Criar uma Conta nova</h3>
+         <div class="mt-5"></div>
+        <form action="/login", method="POST">
+             
+            <label for="bi">Numero do B.I.</label>
+            <input type="text" name="bi" class="form-control" >
+             
+            <label for="senha">Senha</label>
+            <input type="password" name="senha" class="form-control" >
+            
+            
+            <button type="submit" class="btn btn-success mt-3" align="center">Entrar</button>
+            
+
+        </form>
+        <a type="button" href="/cadastro" class="nav-link" align="center">não tem conta?</a>
+    </div>
+        </div>
+        
+    </div>
+
+
+</div>

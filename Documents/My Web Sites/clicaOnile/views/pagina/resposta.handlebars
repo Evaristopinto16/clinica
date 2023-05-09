@@ -1,0 +1,24 @@
+<div class="container">
+    <h3 align="center" class="mt-6">Resultado da Avaliação</h3>
+    <a href="/chekup" class="btn alert-success">Avaliar Sintoma de novo</a> <br>
+    <div class="card">
+        <nav class="alert alert-danger">
+            <h1>Ligue já- 116 <Strong>INEMA</Strong></h1></nav>
+        <div class="card-body">
+            <p>{{resposta}}</p> <br>
+            
+        </div> 
+        
+    </div>
+    <a href="/" class="btn alert-danger">Voltar</a> <button onclick="gerarpdf()">Guardar</button>
+    
+</div>
+<script>
+   
+    function gerarpdf(){
+         var doc = new jsPDF()
+         doc.fromHTML('<h1>ola mundo</h1>')
+
+         doc.save('celke.pdf')
+    }
+</script>

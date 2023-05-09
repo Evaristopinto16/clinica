@@ -1,0 +1,74 @@
+<style>
+   .fundo{
+        background-color: rgba(122, 177, 223, 0.692);
+       color: white;
+        height: 685px;
+        width: 101.9%;;
+   }
+   #img{
+    background-image: url(/public/img/professor.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+   }
+    #body{
+   padding: 0;
+   margin: 0;
+   }
+    
+    
+</style>
+
+{{#each erros}}
+<div class="alert alert-danger">
+   <p slign="center">{{text}}</p>
+</div>
+ 
+{{else}}
+{{/each}}
+<div class="row justify-content-sm-center" id="body">
+    <div class="col-sm-6 col-md-6" id="img">
+        <div class="fundo">
+            <br>
+           <h1 align="center">BEM VINDO</h1>
+           </div>
+        
+
+    </div>
+    <div class="col-sm-6 col-md-6">
+        
+
+     <div class="card card mb-3">
+      <div class="card-body">
+         <h3 align="center">Criar uma Conta nova</h3>
+        <form action="/usuario", method="POST" enctype="multipart/form-data">
+            <label for="nome">Nome Completo:</label>
+            <input type="text" name="nome" class="form-control"  >
+            <label for="bi">Numero do B.I.</label>
+            <input type="text" name="bi" class="form-control" >
+            <label for="especialidade">Especialidade</label>
+            <input type="text" name="especialidade" class="form-control"  >
+            <label for="valor">valor por consulta</label>
+            <input type="number" name="valor" class="form-control"  >
+            <label for="email">Email</label>
+            <input type="email" name="email" class="form-control"  >
+            <label for="senha">Senha</label>
+            <input type="password" name="senha" class="form-control" >
+            <label for="senha2">Repita a sua Senha</label>
+            <input type="password" name="senha2" class="form-control">
+            <label for="carteira">Carteira Medica</label>
+            <input type="file" class="form-control" name="carteira">
+            
+            <button type="submit" class="btn btn-success mt-3" align="center">Criar Conta</button>
+            
+
+        </form>
+        <a type="button" href="/login" class="nav-link" align="center">Já tem conta?</a>
+    </div>
+        </div>
+        
+    </div>
+
+
+</div>

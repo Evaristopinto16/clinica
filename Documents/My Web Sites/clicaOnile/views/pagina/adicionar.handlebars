@@ -1,0 +1,26 @@
+ <h1 >ADICIONAR PRODUTOS</h1>
+ 
+ <div class="card">
+  
+        <div class="card-body"> 
+          <form action="/admin/cadastrar" method="POST" enctype="multipart/form-data">
+          <label for="foto">foto do produto</label>
+          <input type="file" name="foto" class="form-control">
+          <label for="nome" >TITULO</label>
+          <input type="text" name="nome" id="nome" class="form-control" required >
+          <label for="preco">preço</label>
+          
+          <input type="text" name="preco" id="preco"  class="form-control" required> 
+          <label for="categoria">categoria</label>
+          <select name="categoria" id="categoria" >
+            {{#each categoria}}
+            <option value="{{_id}}">{{nome}}</option>
+            {{/each}}
+          </select><br>
+          <button type="submit" class="btn btn-success">ADICIONAR NO STOCK</button>
+           <a class="btn alert-danger" href="/admin/stock" type="button">Cancelar</a>
+
+   </form>
+        </div>
+         
+    </div>
